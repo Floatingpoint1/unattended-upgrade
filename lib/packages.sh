@@ -8,7 +8,7 @@ apt_install() {
 
 install_packages() {
   apt_update
-  apt_install debconf-utils unattended-upgrades
+  apt_install debconf-utils unattended-upgrades python3-gi
   echo "unattended-upgrades unattended-upgrades/enable_auto_updates boolean true" | debconf-set-selections
   dpkg-reconfigure -f noninteractive unattended-upgrades
 }
